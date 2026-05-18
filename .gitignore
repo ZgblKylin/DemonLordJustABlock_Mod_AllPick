@@ -4,6 +4,9 @@ CodeMods/obj/
 *.dll
 *.pdb
 
+# Track mod DLL via LFS
+!CodeMods/AllPickMod.dll
+
 # IDE
 .vs/
 .idea/
@@ -14,8 +17,5 @@ CodeMods/obj/
 Thumbs.db
 .DS_Store
 
-# Keep mod DLL for distribution (track it)
-!CodeMods/AllPickMod.dll
-
-# Decompiled game API dumps (generated)
+# Decompiled API reference (not source)
 api_dump/

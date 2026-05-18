@@ -1,0 +1,5 @@
+{
+  "dll": "AllPickMod.dll",
+  "entryClass": "AllPickMod.Main",
+  "displayName": "AllPick 全选"
+}
