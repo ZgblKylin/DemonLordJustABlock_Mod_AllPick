@@ -1,0 +1,21 @@
+# Build outputs
+CodeMods/bin/
+CodeMods/obj/
+*.dll
+*.pdb
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Keep mod DLL for distribution (track it)
+!CodeMods/AllPickMod.dll
+
+# Decompiled game API dumps (generated)
+api_dump/
