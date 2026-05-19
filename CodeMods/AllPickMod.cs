@@ -6,11 +6,11 @@ namespace AllPickMod
     [DefaultExecutionOrder(10000)]
     public class Main : SimpleModBehaviour
     {
-        private const string ModVersion = "0.1.0";
+        private const string ModVersion = "0.1.1";
 
         public override void OnModLoaded()
         {
-            Log("V" + ModVersion + " 已加载：宝箱/铁匠/选卡全选、商店/奇遇免消耗。");
+            Log("V" + ModVersion + " 已加载：宝箱/铁匠/选卡全选、商店/奇遇/抽奖/斗蛐蛐免消耗。");
         }
 
         public override void OnModUnloaded()
@@ -29,6 +29,16 @@ namespace AllPickMod
             if (!bo.treasureAllGet)
             {
                 bo.treasureAllGet = true;
+            }
+
+            if (bo.playPrice > 0)
+            {
+                bo.playPrice = 0;
+            }
+
+            if (!bo.moneyCanFu)
+            {
+                bo.moneyCanFu = true;
             }
 
             ProcessUnitList(bo.chooseObjects);
