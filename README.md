@@ -130,9 +130,3 @@ namespace AllPickMod
 游戏核心类：`BattleObject`、`SingletonData<T>`、`GameController`、`GameUIWindow`、`UnitObject`、`ConfigManager`、`SkillConfigLoader`、`DialogueManager`。
 
 参考已安装的其他 mod（位于 `D:\SteamLibrary\steamapps\workshop\content\3720420\`）了解具体 API 用法。
-
----
-
-## 许可
-
-仅供个人学习与使用。
