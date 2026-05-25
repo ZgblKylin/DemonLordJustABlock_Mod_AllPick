@@ -6,8 +6,13 @@
     <LangVersion>7.3</LangVersion>
     <Nullable>disable</Nullable>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>.</OutputPath>
+    <OutputPath>..\paks\CodeMods\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="api_dump\**\*.cs" />
+    <Compile Remove="obj\**\*.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">

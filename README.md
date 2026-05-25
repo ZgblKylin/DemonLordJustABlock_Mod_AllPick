@@ -30,13 +30,16 @@ Steam 游戏《卡片魔王·只剩个头》（Demon Lord: Just a Block）的创
 ```
 AllPick/
 ├── README.md
-├── mod.json                  # Mod 元信息
-├── preview.png               # 创意工坊预览图
-└── CodeMods/
-    ├── codemod.json          # 入口配置
+├── paks                      # Mod 目录
+|   ├── CodeMods/
+|   |   ├── AllPickMod.dll    # 编译产物
+|   |   └── codemod.json      # mod配置
+|   ├── mod.json              # Mod 元信息
+|   ├── preview.png           # 创意工坊预览图
+|   └── preview.svg           # 创意工坊预览图源码
+└── src                       # Mod 源码目录
     ├── AllPickMod.cs         # Mod 源码
-    ├── AllPickMod.csproj     # 项目文件
-    └── AllPickMod.dll        # 编译产物
+    └── AllPickMod.csproj     # 项目文件
 ```
 
 ---
@@ -82,20 +85,14 @@ AllPick/
 ### 构建
 
 ```bash
-dotnet build CodeMods/AllPickMod.csproj
+dotnet build src/AllPickMod.csproj
 ```
 
-编译产物 `AllPickMod.dll` 生成在 `CodeMods/` 目录下。
+编译产物 `AllPickMod.dll` 生成在 `paks/CodeMods/` 目录下。
 
 ### 本地测试
 
-将以下文件复制到：
-
-```
-D:\SteamLibrary\steamapps\common\DemonLordJustABlock\DemonLordJustABlock_Data\Managed\CodeMods\
-```
-
-放入所有 mod 文件（`mod.json`、`CodeMods/` 目录及其内容）即可在游戏中加载。
+在游戏模组设置中选择打开本地模组目录，将paks复制到该目录并重命名为AllPick，即可在游戏中加载。
 
 ### 发布
 
